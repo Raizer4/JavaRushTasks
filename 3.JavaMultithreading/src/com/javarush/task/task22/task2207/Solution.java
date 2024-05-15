@@ -2,20 +2,44 @@ package com.javarush.task.task22.task2207;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /* 
 Обращенные слова
 */
 
+import java.util.*;
+
 public class Solution {
+
     public static List<Pair> result = new LinkedList<>();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader fileReader = new BufferedReader(new FileReader(bufferedReader.readLine()));
+        bufferedReader.close();
+        Set<String> unverified = new HashSet<>();
+        while (fileReader.ready()) {
+            String[] data = fileReader.readLine().split(" ");
+            for (String word : data) {
+                StringBuilder stringBuilder = new StringBuilder(word);
+                stringBuilder.reverse();
+                String reversedWord = stringBuilder.toString();
+                if (unverified.contains(reversedWord)) {
+                    unverified.remove(reversedWord);
+                    Pair pair = new Pair();
+                    pair.first = word;
+                    pair.second = reversedWord;
+                    result.add(pair);
+                } else {
+                    unverified.add(word);
+                }
+            }
+        }
+
 
     }
 
@@ -53,3 +77,7 @@ public class Solution {
     }
 
 }
+
+
+
+
