@@ -65,6 +65,5 @@ public class KeyboardObserver extends Thread {
     public KeyEvent getEventFromTop() {
         return keyEvents.poll();
     }
-
 }
 
