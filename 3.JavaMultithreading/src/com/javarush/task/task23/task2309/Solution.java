@@ -22,4 +22,54 @@ public class Solution {
             System.out.println(String.format(format, item.getId(), item.getName(), item.getDescription()));
         }
     }
+
+    public List<User> getUsers(){
+        return new AbstractDbSelectExecutor<User>(){
+            public String getQuery(){
+                return "SELECT * FROM USER";
+            }
+        }.execute();
+
+    }
+
+    public List<Location> getLocations(){
+
+        return new AbstractDbSelectExecutor<Location>(){
+            public String getQuery(){
+                return "SELECT * FROM LOCATION";
+            }
+        }.execute();
+
+    }
+
+    public List<Server> getServers(){
+
+        return new AbstractDbSelectExecutor<Server>(){
+            public String getQuery(){
+                return "SELECT * FROM SERVER";
+            }
+        }.execute();
+
+    }
+
+    public List<Subject> getSubjects(){
+
+        return new AbstractDbSelectExecutor<Subject>(){
+            public String getQuery(){
+                return "SELECT * FROM SUBJECT";
+            }
+        }.execute();
+
+    }
+
+    public List<Subscription> getSubscriptions(){
+
+        return new AbstractDbSelectExecutor<Subscription>(){
+            public String getQuery(){
+                return "SELECT * FROM SUBSCRIPTION";
+            }
+        }.execute();
+
+    }
+
 }
