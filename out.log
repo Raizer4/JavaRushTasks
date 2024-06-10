@@ -2140,3 +2140,44 @@ com.homework.plugin.analytics.PluginWarningException: warning
 2024-06-09 12:33:23 INFO  TaskInfoSelectorMouseListener.createDirectoryRecursive(78) - File created :C:/Java Coding/JavaRushTasks/3.JavaMultithreading/src/com/javarush/task/task36/task3608/dao
 2024-06-09 12:33:23 INFO  TaskInfoSelectorMouseListener.createDirectoryRecursive(78) - File created :C:/Java Coding/JavaRushTasks/3.JavaMultithreading/src/com/javarush/task/task36/task3608/dao/mock
 2024-06-09 12:33:23 INFO  TaskInfoSelectorMouseListener.createDirectoryRecursive(78) - File created :C:/Java Coding/JavaRushTasks/3.JavaMultithreading/src/com/javarush/task/task36/task3608/bean
+2024-06-09 16:28:57 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-09 16:28:58 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-06-09 16:29:00 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-06-09 16:29:20 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-09 16:29:20 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-06-09 16:29:23 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-06-09 16:29:23 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-06-09 16:48:09 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-09 16:48:10 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-06-09 16:48:11 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-06-09 18:20:53 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-09 18:20:53 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-06-09 18:20:56 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-06-09 18:20:57 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-06-09 18:21:11 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-09 18:21:11 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-06-09 18:21:13 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-06-10 10:08:14 INFO  ProjectStartupHandler.runActivity(74) - ---------- Project opened ----------
+2024-06-10 10:08:14 INFO  ProjectStartupHandler.runActivity(75) - ---------- Version 4.03 ----------
+
+2024-06-10 10:08:14 INFO  ApacheHttpClient.isSessionAppropriateWithSecretKey(602) - Waiting for server response.
+2024-06-10 10:08:15 INFO  ApacheHttpClient.refreshUserInfo(305) - responseCode = 200
+2024-06-10 10:08:15 INFO  ApacheHttpClient.refreshUserInfo(311) - User information received.
+2024-06-10 10:08:15 INFO  ApacheHttpClient.startGA(36) - GAService started.
+2024-06-10 11:57:16 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-10 11:57:16 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-06-10 11:57:16 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-06-10 11:57:34 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-10 11:57:34 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-06-10 11:57:35 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-06-10 11:59:19 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-10 11:59:20 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-06-10 11:59:22 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-06-10 12:00:03 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-10 12:00:03 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-06-10 12:00:11 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-06-10 12:00:11 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-06-10 12:00:22 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-10 12:00:23 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-06-10 12:00:28 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-06-10 12:00:28 INFO  TaskInfoSelectorMouseListener.createDirectoryRecursive(78) - File created :C:/Java Coding/JavaRushTasks/3.JavaMultithreading/src/com/javarush/task/task36/task3608/model/service
