@@ -1,6 +1,7 @@
 package com.javarush.task.task36.task3608.model;
 
 import com.javarush.task.task36.task3608.bean.User;
+import com.javarush.task.task36.task3608.dao.UserDao;
 import com.javarush.task.task36.task3608.model.service.UserService;
 import com.javarush.task.task36.task3608.model.service.UserServiceImpl;
 
@@ -18,7 +19,7 @@ public class MainModel implements Model{
 
     @Override
     public void loadUsers() {
-        List<User> usersBetweenLevels = userService.getUsersBetweenLevels(1, 100);
+        List<User> usersBetweenLevels = getAllUsers();
         modelData.setUsers(usersBetweenLevels);
         modelData.setDisplayDeletedUserList(false);
     }
@@ -35,5 +36,23 @@ public class MainModel implements Model{
         modelData.setActiveUser(user);
         modelData.setDisplayDeletedUserList(false);
     }
+
+    public void deleteUserById(long id){
+        userService.deleteUser(id);
+        modelData.setDisplayDeletedUserList(false);
+        modelData.setUsers(getAllUsers());
+    }
+
+    public void changeUserData(String name, long id, int level){
+        User orUpdateUser = userService.createOrUpdateUser(name, id, level);
+        modelData.setActiveUser(orUpdateUser);
+        modelData.setUsers(getAllUsers());
+    }
+
+    private List<User> getAllUsers() {
+       return userService.filterOnlyActiveUsers(userService.getUsersBetweenLevels(1,100));
+    }
+
+
 
 }
