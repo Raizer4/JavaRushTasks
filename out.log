@@ -2786,3 +2786,43 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -1
 2024-06-14 09:19:43 INFO  ApacheHttpClient.refreshUserInfo(305) - responseCode = 200
 2024-06-14 09:19:43 INFO  ApacheHttpClient.refreshUserInfo(311) - User information received.
 2024-06-14 09:19:43 INFO  ApacheHttpClient.startGA(36) - GAService started.
+2024-06-14 10:19:44 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-14 10:19:45 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-06-14 10:19:57 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-06-14 10:19:57 INFO  TaskInfoSelectorMouseListener.createDirectoryRecursive(78) - File created :C:/Java Coding/JavaRushTasks/3.JavaMultithreading/src/com/javarush/task/task25/task2513
+2024-06-14 10:28:36 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-14 10:28:37 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-06-14 10:28:42 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-06-14 10:28:42 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-06-14 10:38:31 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-14 10:38:31 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-06-14 10:38:34 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-06-14 10:38:34 INFO  TaskInfoSelectorMouseListener.createDirectoryRecursive(78) - File created :C:/Java Coding/JavaRushTasks/3.JavaMultithreading/src/com/javarush/task/task25/task2514
+2024-06-14 10:40:11 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-14 10:40:12 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-06-14 10:40:17 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-06-14 10:40:18 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-06-14 11:21:35 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-14 11:21:35 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-06-14 11:21:38 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-06-14 11:21:38 INFO  TaskInfoSelectorMouseListener.createDirectoryRecursive(78) - File created :C:/Java Coding/JavaRushTasks/3.JavaMultithreading/src/com/javarush/task/task29
+2024-06-14 11:21:38 INFO  TaskInfoSelectorMouseListener.createDirectoryRecursive(78) - File created :C:/Java Coding/JavaRushTasks/3.JavaMultithreading/src/com/javarush/task/task29/task2909
+2024-06-14 11:21:38 INFO  TaskInfoSelectorMouseListener.createDirectoryRecursive(78) - File created :C:/Java Coding/JavaRushTasks/3.JavaMultithreading/src/com/javarush/task/task29/task2909/car
+2024-06-14 11:21:38 INFO  TaskInfoSelectorMouseListener.createDirectoryRecursive(78) - File created :C:/Java Coding/JavaRushTasks/3.JavaMultithreading/src/com/javarush/task/task29/task2909/user
+2024-06-14 11:21:38 INFO  TaskInfoSelectorMouseListener.createDirectoryRecursive(78) - File created :C:/Java Coding/JavaRushTasks/3.JavaMultithreading/src/com/javarush/task/task29/task2909/human
+2024-06-14 21:31:52 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-14 21:31:52 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-06-14 21:31:56 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-06-14 21:31:57 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-06-14 21:32:03 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-14 21:32:04 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-06-14 21:32:08 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-06-14 21:32:09 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-06-14 21:32:10 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-06-15 11:08:41 INFO  ProjectStartupHandler.runActivity(74) - ---------- Project opened ----------
+2024-06-15 11:08:41 INFO  ProjectStartupHandler.runActivity(75) - ---------- Version 4.03 ----------
+
+2024-06-15 11:08:41 INFO  ApacheHttpClient.isSessionAppropriateWithSecretKey(602) - Waiting for server response.
+2024-06-15 11:08:41 INFO  ApacheHttpClient.refreshUserInfo(305) - responseCode = 200
+2024-06-15 11:08:41 INFO  ApacheHttpClient.refreshUserInfo(311) - User information received.
+2024-06-15 11:08:41 INFO  ApacheHttpClient.startGA(36) - GAService started.
