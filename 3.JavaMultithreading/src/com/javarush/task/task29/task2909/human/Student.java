@@ -2,14 +2,17 @@ package com.javarush.task.task29.task2909.human;
 
 import java.util.Date;
 
-public class Student extends Human {
+public class Student extends UniversityPerson {
+
     private double averageGrade;
-    private String university;
+    private int course;
+
     private Date beginningOfSession;
     private Date endOfSession;
 
+
     public Student(String name, int age, double averageGrade) {
-        super(false);
+        super(name, age);
         this.name = name;
         this.age = age;
         this.averageGrade = averageGrade;
@@ -22,46 +25,40 @@ public class Student extends Human {
     public void learn() {
     }
 
-    public String getUniversity() {
-        return university;
+
+    public void setCourse(int course){
+        this.course = course;
     }
 
-    public void setUniversity(String university) {
-        this.university = university;
+    public int getCourse() {
+        return course;
     }
 
-    public void printData() {
-        System.out.println("Студент: " + name);
-    }
-
-    public void incAverageGradeBy01() {
-        averageGrade += 0.1;
-    }
-
-    public void incAverageGradeBy02() {
-        averageGrade += 0.2;
-    }
-
-    public void setValue(String name, double value) {
-        if (name.equals("averageGrade")) {
-            averageGrade = value;
-            return;
-        }
-        if (name.equals("course")) {
-            course = (int) value;
-            return;
-        }
-    }
-
-    public void setBeginningOfSession(int day, int month, int year) {
-        beginningOfSession = new Date(year, month, day);
-    }
-
-    public void setEndOfSession(int day, int month, int year) {
-        endOfSession = new Date(year, month, day);
+    public void setAverageGrade(double averageGrade){
+        this.averageGrade = averageGrade;
     }
 
     public double getAverageGrade() {
         return averageGrade;
     }
+
+    public void incAverageGrade(double delta){
+        double temp = getAverageGrade();
+        setAverageGrade(temp += delta);
+    }
+
+
+    public void setBeginningOfSession(Date date) {
+        beginningOfSession = date;
+    }
+
+    public void setEndOfSession(Date date) {
+        endOfSession = date;
+    }
+
+
+    public String getPosition(){
+        return "Студент";
+    }
+
 }

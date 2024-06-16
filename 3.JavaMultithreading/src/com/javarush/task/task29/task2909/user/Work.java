@@ -10,4 +10,5 @@ public class Work {
     public void setBoss(String boss) {
         this.boss = boss;
     }
+
 }
