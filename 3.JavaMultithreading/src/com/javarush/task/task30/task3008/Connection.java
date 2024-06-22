@@ -12,6 +12,7 @@ public class Connection implements Closeable {
     private final Socket socket;
     private final ObjectOutputStream out;
     private final ObjectInputStream in;
+    private final ObjectOutputStream out;
 
     public Connection(Socket socket) throws IOException {
         this.socket = socket;
