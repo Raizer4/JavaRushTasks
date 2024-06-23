@@ -14,25 +14,22 @@ public class ConsoleHelper {
     public static String readString() {
         while (true) {
             try {
-                String line = bis.readLine();
-                if (line != null){
-                    return line;
-                }
+                String buf = bis.readLine();
+                if (buf != null)
+                    return buf;
             } catch (IOException e) {
                 writeMessage("Произошла ошибка при попытке ввода текста. Попробуйте еще раз.");
             }
         }
     }
 
-    public static int readInt(){
+    public static int readInt() {
         while (true) {
             try {
-               return Integer.parseInt(readString().trim());
+                return Integer.parseInt(readString().trim());
             } catch (NumberFormatException e) {
                 writeMessage("Произошла ошибка при попытке ввода числа. Попробуйте еще раз.");
             }
         }
     }
-
-
 }
