@@ -14,7 +14,11 @@ public class ProducerTask implements Runnable {
 
     public void run() {
         while (!stopped) {
-            transferObject.put(i.incrementAndGet());
+            try {
+                transferObject.put(i.incrementAndGet());
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 

@@ -6,16 +6,22 @@ public class TransferObject {
     protected volatile boolean isValuePresent = false; //use this variable
 
     public synchronized int get() throws InterruptedException {
+        while (!isValuePresent) {
+            wait();
+        }
         System.out.println("Got: " + value);
         isValuePresent = false;
-        wait();
+        notifyAll();
         return value;
     }
 
-    public synchronized void put(int value) {
+    public synchronized void put(int value) throws InterruptedException {
+        while (isValuePresent){
+            wait();
+        }
+        System.out.println("Put: " + value);
         this.value = value;
         isValuePresent = true;
-        System.out.println("Put: " + value);
         notifyAll();
     }
 
