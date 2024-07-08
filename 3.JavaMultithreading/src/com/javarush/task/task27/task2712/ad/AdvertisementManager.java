@@ -3,7 +3,6 @@ package com.javarush.task.task27.task2712.ad;
 import com.javarush.task.task27.task2712.ConsoleHelper;
 import com.javarush.task.task27.task2712.Tablet;
 import com.javarush.task.task27.task2712.kitchen.Order;
-import jdk.incubator.foreign.Addressable;
 
 import java.sql.Array;
 import java.util.ArrayList;
@@ -22,33 +21,13 @@ public class AdvertisementManager {
         this.timeSeconds = timeSeconds;
     }
 
-    public void process() {
-
-        if (storage.list().isEmpty()) {
-            throw new NoVideoAvailableException();
-        }
-
-
-        Collections.sort(selectedAds, new Comparator<Advertisement>() {
-            @Override
-            public int compare(Advertisement o1, Advertisement o2) {
-                long result = o2.getAmountPerOneDisplaying() - o1.getAmountPerOneDisplaying();
-                if (result != 0) {
-                    return (int) result;
-                }
-                return (int) ((o1.getAmountPerOneDisplaying() / o1.getDuration()) - (o2.getAmountPerOneDisplaying() / o2.getDuration()));
-            }
-        });
-
-    }
-
     public void processVideos() {
 
         if (storage.list().isEmpty()) {
             throw new NoVideoAvailableException();
         }
 
-        List<Advertisement> selectedAds = getMaxProfitAds(storage, timeSeconds);
+        List<Advertisement> selectedAds = getMaxProfitAds(storage.list(), timeSeconds);
 
         Collections.sort(selectedAds, new Comparator<Advertisement>() {
             @Override
@@ -62,7 +41,8 @@ public class AdvertisementManager {
         });
 
         for (Advertisement ad : selectedAds) {
-            System.out.println(ad); // Выводим информацию о каждом выбранном ролике
+            System.out.println(ad.getName() + " is displaying... " + ad.getAmountPerOneDisplaying() + ", "
+                    + (ad.getAmountPerOneDisplaying() * 1000 / ad.getDuration()));
             ad.revalidate();
         }
 
@@ -80,7 +60,7 @@ public class AdvertisementManager {
         List<Advertisement> remainingAds = ads.subList(1, ads.size()); // лист из реклам но без первой
 
         // Если текущий ролик превышает оставшееся время, пропускаем его
-        if (currentAd.getDuration() > remainingTime) {
+        if (currentAd.getDuration() > remainingTime || currentAd.getHits() <= 0) {
             return getMaxProfitAds(remainingAds, remainingTime);
         }
 

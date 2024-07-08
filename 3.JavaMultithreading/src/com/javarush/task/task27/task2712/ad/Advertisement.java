@@ -29,6 +29,10 @@ public class Advertisement {
         return amountPerOneDisplaying;
     }
 
+    public int getHits() {
+        return hits;
+    }
+
     public String getName() {
         return name;
     }

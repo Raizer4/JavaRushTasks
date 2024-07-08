@@ -14,16 +14,13 @@ public class Restaurant {
         Cook sanji = new Cook("Sanji");
         Waiter waiter = new Waiter();
 
-
         tablet.addObserver(sanji);
         sanji.addObserver(waiter);
 
         tablet.createOrder();
-       /* tablet.createOrder();
         tablet.createOrder();
-        tablet.createOrder();*/
-
-
+        tablet.createOrder();
+        tablet.createOrder();
 
 
     }
