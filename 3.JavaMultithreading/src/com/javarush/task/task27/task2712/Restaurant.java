@@ -9,20 +9,17 @@ import java.util.Observable;
 
 public class Restaurant {
     public static void main(String[] args) {
-
         Tablet tablet = new Tablet(5);
-        Cook sanji = new Cook("Sanji");
+        Cook firstCook = new Cook("Amigo");
         Waiter waiter = new Waiter();
-
-        tablet.addObserver(sanji);
-        sanji.addObserver(waiter);
-
+        tablet.addObserver(firstCook);
         tablet.createOrder();
-        tablet.createOrder();
-        tablet.createOrder();
-        tablet.createOrder();
-
-
+        firstCook.addObserver(waiter);
+        DirectorTablet directorTablet = new DirectorTablet();
+        directorTablet.printAdvertisementProfit();
+        directorTablet.printCookWorkloading();
+        directorTablet.printActiveVideoSet();
+        directorTablet.printArchivedVideoSet();
     }
 
 }

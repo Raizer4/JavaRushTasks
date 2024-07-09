@@ -3,6 +3,9 @@ package com.javarush.task.task27.task2712.ad;
 import com.javarush.task.task27.task2712.ConsoleHelper;
 import com.javarush.task.task27.task2712.Tablet;
 import com.javarush.task.task27.task2712.kitchen.Order;
+import com.javarush.task.task27.task2712.statistic.StatisticManager;
+import com.javarush.task.task27.task2712.statistic.event.NoAvailableVideoEventDataRow;
+import com.javarush.task.task27.task2712.statistic.event.VideoSelectedEventDataRow;
 
 import java.sql.Array;
 import java.util.ArrayList;
@@ -13,7 +16,7 @@ import java.util.logging.Level;
 
 public class AdvertisementManager {
 
-    final AdvertisementStorage storage = AdvertisementStorage.getInstance();
+    private final AdvertisementStorage storage = AdvertisementStorage.getInstance();
 
     private int timeSeconds;
 
@@ -40,11 +43,22 @@ public class AdvertisementManager {
             }
         });
 
+        int getAmount = 0;
+
+        for (Advertisement temp : selectedAds){
+            getAmount += temp.getAmountPerOneDisplaying();
+        }
+
+        VideoSelectedEventDataRow videoSelected = new VideoSelectedEventDataRow(selectedAds,getAmount, timeSeconds);
+        StatisticManager.getInstance().register(videoSelected);
+
         for (Advertisement ad : selectedAds) {
             System.out.println(ad.getName() + " is displaying... " + ad.getAmountPerOneDisplaying() + ", "
                     + (ad.getAmountPerOneDisplaying() * 1000 / ad.getDuration()));
             ad.revalidate();
         }
+
+
 
     }
 
@@ -55,25 +69,25 @@ public class AdvertisementManager {
             return new ArrayList<>();
         }
 
-        Advertisement currentAd = ads.get(0); // первая реклама
+        Advertisement currentAd = ads.get(0);
 
-        List<Advertisement> remainingAds = ads.subList(1, ads.size()); // лист из реклам но без первой
+        List<Advertisement> remainingAds = ads.subList(1, ads.size());
 
-        // Если текущий ролик превышает оставшееся время, пропускаем его
+
         if (currentAd.getDuration() > remainingTime || currentAd.getHits() <= 0) {
             return getMaxProfitAds(remainingAds, remainingTime);
         }
 
-        // Вариант 1: текущий ролик не включен
+
         List<Advertisement> withoutCurrent = getMaxProfitAds(remainingAds, remainingTime);
 
-        // Вариант 2: текущий ролик включен
+
         List<Advertisement> withCurrent = new ArrayList<>();
 
         withCurrent.add(currentAd);
         withCurrent.addAll(getMaxProfitAds(remainingAds, remainingTime - currentAd.getDuration()));
 
-        // Выбор варианта с максимальной выгодой
+
         long profitWithoutCurrent = withoutCurrent.stream().mapToLong(Advertisement::getAmountPerOneDisplaying).sum();
         long profitWithCurrent = withCurrent.stream().mapToLong(Advertisement::getAmountPerOneDisplaying).sum();
 

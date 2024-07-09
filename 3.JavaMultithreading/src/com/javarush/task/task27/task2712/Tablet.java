@@ -36,6 +36,7 @@ public class Tablet extends Observable {
         }catch (NoVideoAvailableException e){
             logger.log(Level.INFO, "No video is available for the order " + order);
         }
+
         return order;
     }
 
