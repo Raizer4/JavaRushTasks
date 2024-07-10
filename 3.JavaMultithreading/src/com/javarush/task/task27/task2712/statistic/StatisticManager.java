@@ -25,7 +25,6 @@ public class StatisticManager {
 
 
 
-    private Set<Cook> cooks = new HashSet<>();
 
     private class StatisticStorage {
 
@@ -58,13 +57,10 @@ public class StatisticManager {
     }
 
 
-    public void register(Cook cook){
-        cooks.add(cook);
-    }
-
     public void register(EventDataRow data) {
         this.statisticStorage.put(data);
     }
+
 
     public Map<String, Long> getProfitMap() {
 

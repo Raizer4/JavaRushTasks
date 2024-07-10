@@ -37,6 +37,10 @@ public class Advertisement {
         return name;
     }
 
+    public boolean isActive() {
+        return hits > 0;
+    }
+
     public void revalidate(){
        if (hits <= 0){
            throw new NoVideoAvailableException();
