@@ -11,5 +11,6 @@
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
     <orderEntry type="library" name="metawidget.modules.jaxb" level="project" />
     <orderEntry type="library" name="glassfish.jaxb.runtime" level="project" />
+    <orderEntry type="library" name="github.skjolber.xml.log.filter.w3c.dom" level="project" />
   </component>
 </module>

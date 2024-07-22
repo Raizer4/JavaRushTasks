@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="github.skjolber.xml.log.filter.w3c.dom" type="repository">
+    <properties maven-id="com.github.skjolber.xml-log-filter:xml-log-filter-w3c-dom:1.0.8" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/skjolber/xml-log-filter/xml-log-filter-w3c-dom/1.0.8/xml-log-filter-w3c-dom-1.0.8.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/skjolber/xml-log-filter/xml-log-filter-api/1.0.8/xml-log-filter-api-1.0.8.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/skjolber/xml-log-filter/xml-log-filter-test/1.0.8/xml-log-filter-test-1.0.8.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/skjolber/indent/1.0.0/indent-1.0.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/skjolber/xml-log-filter/xml-log-filter-conformance/1.0.8/xml-log-filter-conformance-1.0.8.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/rometools/rome/1.12.2/rome-1.12.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/rometools/rome-utils/1.12.2/rome-utils-1.12.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jdom/jdom2/2.0.6/jdom2-2.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/xerces/xercesImpl/2.12.1/xercesImpl-2.12.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/xmlunit/xmlunit-core/2.8.2/xmlunit-core-2.8.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
