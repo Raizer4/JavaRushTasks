@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="metawidget.modules.jaxb" type="repository">
+    <properties maven-id="org.metawidget.modules:metawidget-jaxb:4.3-SNAPSHOT" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/metawidget/modules/metawidget-jaxb/4.3-SNAPSHOT/metawidget-jaxb-4.3-SNAPSHOT.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/metawidget/modules/metawidget-core/4.3-SNAPSHOT/metawidget-core-4.3-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
