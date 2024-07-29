@@ -7,20 +7,19 @@ package com.javarush.task.task36.task3609;
 public class Solution {
 
     public static void main(String[] args) {
-
         CarModel model = retrieveCarFromDatabase();
         SpeedometerView view = new SpeedometerView();
         CarController controller = new CarController(model, view);
 
         controller.updateView();
 
-        model.increaseSpeed(15);
+        controller.increaseSpeed(15);
         controller.updateView();
 
-        model.increaseSpeed(50);
+        controller.increaseSpeed(50);
         controller.updateView();
 
-        model.decreaseSpeed(7);
+        controller.decreaseSpeed(7);
         controller.updateView();
     }
 
