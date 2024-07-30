@@ -2,6 +2,7 @@ package com.javarush.task.task36.task3611;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 /* 
 Сколько у человека потенциальных друзей?
@@ -21,10 +22,30 @@ public class Solution {
     }
 
     public Set<Integer> getAllFriendsAndPotentialFriends(int index, int deep) {
-        //напишите тут ваш код
+        Set<Integer> result = new HashSet<>();
+
+        if (deep == 0) {
+            return result;
+        } else {
+            for (int i = 0; i < humanRelationships.length; i++) {
+                if ((i < index) && (index < humanRelationships.length) && humanRelationships[index][i]) {
+                    result.add(i);
+                } else if ((i > index) && humanRelationships[i][index]) {
+                    result.add(i);
+                }
+            }
+            Object[] arrayToProcess = result.toArray();
+
+            for (Object value : arrayToProcess) {
+                result.addAll(getAllFriendsAndPotentialFriends((Integer) value, deep - 1));
+            }
+
+            result.remove(index);
+        }
+
+        return result;
     }
 
-    // Remove from the set the people with whom you already have a relationship
     public Set<Integer> removeFriendsFromSet(Set<Integer> set, int index) {
         for (int i = 0; i < humanRelationships.length; i++) {
             if ((i < index) && (index < humanRelationships.length) && humanRelationships[index][i]) {
@@ -36,7 +57,6 @@ public class Solution {
         return set;
     }
 
-    // Return test data
     private static boolean[][] generateRelationships() {
         return new boolean[][]{
                 {true},                                                                 //0
@@ -49,4 +69,5 @@ public class Solution {
                 {false, false, false, true, false, false, false, true}                  //7
         };
     }
+
 }
