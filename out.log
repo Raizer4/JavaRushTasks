@@ -5721,3 +5721,155 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: -1
 2024-07-30 23:20:30 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
 2024-07-30 23:20:33 INFO  ApacheHttpClient.completed(32) - responseCode = 200
 2024-07-30 23:20:33 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-30 23:34:06 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-07-30 23:34:06 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-07-30 23:34:07 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-07-30 23:34:07 INFO  TaskInfoSelectorMouseListener.createDirectoryRecursive(78) - File created :C:/Java Coding/JavaRushTasks/4.JavaCollections/src/com/javarush/task/task33/task3310
+2024-07-30 23:36:52 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-07-30 23:36:53 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-30 23:36:55 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-07-30 23:36:56 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-30 23:39:07 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-07-30 23:39:08 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-07-30 23:39:12 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-07-30 23:52:28 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-07-30 23:52:29 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-30 23:52:33 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-07-30 23:52:33 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-30 23:53:25 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-07-30 23:53:26 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-07-30 23:53:27 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-07-31 00:17:36 INFO  ProjectStartupHandler.projectClosing(155) - ---------- Project closed ----------
+
+2024-07-31 00:17:36 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 00:17:36 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 00:17:37 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 00:17:37 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 00:17:37 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 00:17:38 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 00:17:38 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 00:17:38 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 00:17:39 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 00:17:39 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 00:17:39 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 13:21:59 INFO  ProjectStartupHandler.runActivity(74) - ---------- Project opened ----------
+2024-07-31 13:21:59 INFO  ProjectStartupHandler.runActivity(75) - ---------- Version 4.03 ----------
+
+2024-07-31 13:22:00 INFO  ApacheHttpClient.isSessionAppropriateWithSecretKey(602) - Waiting for server response.
+2024-07-31 13:22:00 INFO  ApacheHttpClient.refreshUserInfo(305) - responseCode = 200
+2024-07-31 13:22:00 INFO  ApacheHttpClient.refreshUserInfo(311) - User information received.
+2024-07-31 13:22:00 INFO  ApacheHttpClient.startGA(36) - GAService started.
+2024-07-31 14:05:49 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-07-31 14:05:50 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 14:05:54 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-07-31 14:07:46 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-07-31 14:07:47 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 14:07:52 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-07-31 14:07:52 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 14:08:44 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-07-31 14:08:44 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-07-31 14:08:45 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-07-31 14:08:46 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-07-31 14:27:25 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-07-31 14:27:26 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 14:27:26 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-07-31 14:27:26 INFO  ApacheHttpClient.completed(32) - responseCode = 429
+2024-07-31 14:27:26 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 14:27:26 WARN  TaskCompleted.run(78) - The previous task has not been verified. Please wait and try again.
+com.homework.plugin.analytics.PluginWarningException: warning
+	at com.homework.plugin.callback.TaskCompleted.run(TaskCompleted.java:78)
+	at com.intellij.openapi.application.TransactionGuardImpl.runWithWritingAllowed(TransactionGuardImpl.java:215)
+	at com.intellij.openapi.application.TransactionGuardImpl.access$100(TransactionGuardImpl.java:22)
+	at com.intellij.openapi.application.TransactionGuardImpl$1.run(TransactionGuardImpl.java:197)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:873)
+	at com.intellij.openapi.application.impl.ApplicationImpl$3.run(ApplicationImpl.java:511)
+	at com.intellij.openapi.application.impl.FlushQueue.doRun(FlushQueue.java:69)
+	at com.intellij.openapi.application.impl.FlushQueue.runNextEvent(FlushQueue.java:112)
+	at com.intellij.openapi.application.impl.FlushQueue.flushNow(FlushQueue.java:42)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:776)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:727)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:746)
+	at com.intellij.ide.IdeEventQueue.defaultDispatchEvent(IdeEventQueue.java:898)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.java:746)
+	at com.intellij.ide.IdeEventQueue.lambda$dispatchEvent$6(IdeEventQueue.java:439)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computePrioritized(CoreProgressManager.java:803)
+	at com.intellij.ide.IdeEventQueue.lambda$dispatchEvent$7(IdeEventQueue.java:438)
+	at com.intellij.openapi.application.TransactionGuardImpl.performActivity(TransactionGuardImpl.java:106)
+	at com.intellij.ide.IdeEventQueue.performActivity(IdeEventQueue.java:604)
+	at com.intellij.ide.IdeEventQueue.lambda$dispatchEvent$8(IdeEventQueue.java:436)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runIntendedWriteActionOnCurrentThread(ApplicationImpl.java:873)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.java:484)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:207)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:128)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:117)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:105)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:92)
+2024-07-31 14:27:31 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-07-31 14:28:54 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-07-31 14:28:55 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 14:29:01 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-07-31 14:29:57 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-07-31 14:29:58 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 14:30:04 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-07-31 14:30:46 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-07-31 14:30:46 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 14:30:51 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-07-31 14:30:51 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-07-31 14:33:19 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-07-31 14:33:20 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-07-31 14:33:21 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-08-05 09:46:35 INFO  ProjectStartupHandler.runActivity(74) - ---------- Project opened ----------
+2024-08-05 09:46:35 INFO  ProjectStartupHandler.runActivity(75) - ---------- Version 4.03 ----------
+
+2024-08-05 09:46:35 INFO  ApacheHttpClient.isSessionAppropriateWithSecretKey(602) - Waiting for server response.
+2024-08-05 09:46:35 INFO  ApacheHttpClient.isSessionAppropriateWithSecretKey(602) - Waiting for server response.
+2024-08-05 09:46:36 INFO  ApacheHttpClient.refreshUserInfo(305) - responseCode = 200
+2024-08-05 09:46:36 INFO  ApacheHttpClient.refreshUserInfo(311) - User information received.
+2024-08-05 09:46:36 INFO  ApacheHttpClient.startGA(36) - GAService started.
+2024-08-05 10:18:01 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-08-05 10:18:02 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-08-05 10:18:05 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-08-05 18:16:09 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-08-05 18:16:10 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-08-05 18:16:13 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-08-05 18:16:14 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-08-05 18:16:21 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-08-05 18:16:21 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-08-05 18:16:22 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-08-05 20:25:38 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-08-05 20:25:38 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-08-05 20:25:49 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-08-05 20:25:50 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-08-05 20:37:01 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-08-05 20:37:02 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-08-05 20:37:03 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-08-05 22:40:30 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-08-05 22:40:31 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-08-05 22:40:45 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-08-05 22:40:46 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-08-06 13:11:56 INFO  ProjectStartupHandler.runActivity(74) - ---------- Project opened ----------
+2024-08-06 13:11:56 INFO  ProjectStartupHandler.runActivity(75) - ---------- Version 4.03 ----------
+
+2024-08-06 13:11:56 INFO  ApacheHttpClient.isSessionAppropriateWithSecretKey(602) - Waiting for server response.
+2024-08-06 13:11:56 INFO  ApacheHttpClient.isSessionAppropriateWithSecretKey(602) - Waiting for server response.
+2024-08-06 13:11:56 INFO  ApacheHttpClient.refreshUserInfo(305) - responseCode = 200
+2024-08-06 13:11:56 INFO  ApacheHttpClient.refreshUserInfo(311) - User information received.
+2024-08-06 13:11:56 INFO  ApacheHttpClient.startGA(36) - GAService started.
+2024-08-06 14:16:50 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-08-06 14:16:51 INFO  ApacheHttpClient.getFilteredTasks(336) - responseCode = 200
+2024-08-06 14:16:52 INFO  ApacheHttpClient.getTaskTemplateInfo(353) - responseCode = 200
+2024-08-06 16:32:39 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-08-06 16:32:39 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-08-06 16:32:42 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-08-06 19:20:34 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-08-06 19:20:35 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-08-06 19:20:39 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-08-06 19:21:04 INFO  ApacheHttpClient.getWebResourceAsStream(502) - responseCode = 200
+2024-08-06 19:21:04 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
+2024-08-06 19:21:12 INFO  ApacheHttpClient.completed(32) - responseCode = 200
+2024-08-06 19:21:12 INFO  ApacheHttpClient.getTask(488) - responseCode = 200
