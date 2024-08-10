@@ -106,7 +106,8 @@ public class OurHashMapStorageStrategy implements StorageStrategy {
 
         if (table[bucketIndex] == null){
             createEntry(hash, key, value, bucketIndex);
-        }else {
+        }
+        else {
             Entry entry = table[bucketIndex];
 
             while (entry != null){
@@ -119,8 +120,6 @@ public class OurHashMapStorageStrategy implements StorageStrategy {
             }
 
         }
-
-
 
         size++;
         if (size >= threshold) {

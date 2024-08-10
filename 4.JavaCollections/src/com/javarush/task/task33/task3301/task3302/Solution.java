@@ -1,4 +1,4 @@
-package com.javarush.task.task33.task3302;
+package com.javarush.task.task33.task3301.task3302;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnore;
