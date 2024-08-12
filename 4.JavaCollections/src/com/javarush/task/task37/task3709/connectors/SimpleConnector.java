@@ -11,4 +11,5 @@ public class SimpleConnector implements Connector {
     public void connect() {
         System.out.println("Successfully connected to " + resourceString);
     }
+
 }

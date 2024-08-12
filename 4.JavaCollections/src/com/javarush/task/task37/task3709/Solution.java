@@ -9,6 +9,7 @@ Security Proxy
 */
 
 public class Solution {
+
     public static void main(String[] args) {
         Connector securityProxyConnector = new SecurityProxyConnector("google.com");
         Connector simpleConnector = new SimpleConnector("javarush.ru");
