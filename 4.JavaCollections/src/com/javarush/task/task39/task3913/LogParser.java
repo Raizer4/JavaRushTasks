@@ -1,23 +1,21 @@
 package com.javarush.task.task39.task3913;
 
-import com.javarush.task.task39.task3913.query.DateQuery;
-import com.javarush.task.task39.task3913.query.EventQuery;
-import com.javarush.task.task39.task3913.query.IPQuery;
-import com.javarush.task.task39.task3913.query.UserQuery;
+
+
+import com.javarush.task.task39.task3913.query.*;
 
 import java.io.*;
-import java.nio.Buffer;
-import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class LogParser implements IPQuery, UserQuery, DateQuery, EventQuery {
+public class LogParser implements IPQuery, UserQuery, DateQuery, EventQuery, QLQuery {
     Path logDir;
     List<Path> files;
     SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
@@ -49,7 +47,7 @@ public class LogParser implements IPQuery, UserQuery, DateQuery, EventQuery {
                 while ((len = reader.readLine()) != null) {
                     String[] arr = len.split("\t");
                     Date real = formatter.parse(arr[2]);
-                    if (dateCheck(real,after,before)){
+                    if (dateCheck(real, after, before)) {
                         result.add(arr[0]);
                     }
                 }
@@ -661,9 +659,6 @@ public class LogParser implements IPQuery, UserQuery, DateQuery, EventQuery {
         return result;
     }
 
-
-
-
     @Override
     public int getNumberOfAllEvents(Date after, Date before) {
         return getAllEvents(after,before).size();
@@ -926,20 +921,255 @@ public class LogParser implements IPQuery, UserQuery, DateQuery, EventQuery {
         return map;
     }
 
+    @Override
+    public Set<Object> execute(String query) {
+        Set<Object> result = new HashSet<>();
 
+        String[] s = query.split(" ");
+
+        if (s.length == 2){
+            return findAll(indexFor(s[1]));
+        }
+
+        List<String> extractedValues = extractQuotedValues(query);
+        int in1 = indexFor(s[1]);
+        int in2 = indexFor(s[3]);
+
+        if (extractedValues.size() == 1) {
+            return getElements(in1, in2, extractedValues.get(0));
+        }else if (extractedValues.size() == 3){
+           return getElementsForDate(in1,in2,extractedValues.get(0),extractedValues.get(1),extractedValues.get(2));
+        }
+
+        return result;
+    }
+
+
+    public static List<String> extractQuotedValues(String input) {
+        List<String> values = new ArrayList<>();
+        Pattern pattern = Pattern.compile("\"([^\"]*)\"");
+        Matcher matcher = pattern.matcher(input);
+
+        while (matcher.find()) {
+            values.add(matcher.group(1));
+        }
+
+        return values;
+    }
+
+    private Set<Object> findAll(int index){
+        Set<Object> result = new HashSet<>();
+
+        if (index == 0){
+            Set<String> uniqueIPs = getUniqueIPs(new Date(Long.MIN_VALUE), new Date(Long.MAX_VALUE));
+            for (String temp : uniqueIPs){
+                result.add(temp);
+            }
+        }else if (index == 1){
+            Set<String> allUsers = getAllUsers();
+            for (String temp : allUsers){
+                result.add(temp);
+            }
+        }else if (index == 2){
+            for (Path temp : files){
+                try(BufferedReader buff = new BufferedReader(new InputStreamReader(Files.newInputStream(temp)))){
+                    String len;
+                    while ((len = buff.readLine()) != null) {
+                        String[] split = len.split("\t");
+                        Date real = formatter.parse(split[2]);
+                        result.add(real);
+                    }
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                } catch (ParseException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }else if (index == 3){
+            for (Path temp : files){
+                try(BufferedReader buff = new BufferedReader(new InputStreamReader(Files.newInputStream(temp)))){
+                    String len;
+                    while ((len = buff.readLine()) != null) {
+                        String[] split = len.split("\t");
+                        Event event = Event.valueOf(split[3].split(" ")[0]);
+                        result.add(event);
+                    }
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }else if (index == 4){
+            for (Path temp : files){
+                try(BufferedReader buff = new BufferedReader(new InputStreamReader(Files.newInputStream(temp)))){
+                    String len;
+                    while ((len = buff.readLine()) != null) {
+                        String[] split = len.split("\t");
+                        Status status = Status.valueOf(split[4]);
+                        result.add(status);
+                    }
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+
+
+        return result;
+    }
+
+    public Set<Object> getElements(int id1, int id2, String value) {
+        Set<Object> result = new HashSet<>();
+
+        for (Path temp : files){
+            try(BufferedReader reader = new BufferedReader(new InputStreamReader(Files.newInputStream(temp)))){
+                String len;
+                while((len = reader.readLine()) != null){
+                    String[] split = len.split("\t");
+
+                    if (id2 == 3){
+                       if (split[id2].split(" ")[0].equals(value)){
+                           if (id1 == 0){
+                               String ip = split[0];
+                               result.add(ip);
+                           }else if (id1 == 1) {
+                               String user = split[1];
+                               result.add(user);
+                           }else if (id1 == 2) {
+                               Date parse = formatter.parse(split[2]);
+                               result.add(parse);
+                           }else if (id1 == 3) {
+                               Event event = Event.valueOf(split[3].split(" ")[0]);
+                               result.add(event);
+                           }else if (id1 == 4) {
+                               Status status = Status.valueOf(split[4]);
+                               result.add(status);
+                           }
+                       }
+                    }else if (split[id2].equals(value)){
+                        if (id1 == 0){
+                            String ip = split[0];
+                            result.add(ip);
+                        }else if (id1 == 1) {
+                            String user = split[1];
+                            result.add(user);
+                        }else if (id1 == 2) {
+                            Date parse = formatter.parse(split[2]);
+                            result.add(parse);
+                        }else if (id1 == 3) {
+                            Event event = Event.valueOf(split[3].split(" ")[0]);
+                            result.add(event);
+                        }else if (id1 == 4) {
+                            Status status = Status.valueOf(split[4]);
+                            result.add(status);
+                        }
+                    }
+
+
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            } catch (ParseException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return result;
+    }
+
+    public Set<Object> getElementsForDate(int id1, int id2, String value, String date_1, String date_2) {
+        Set<Object> result = new HashSet<>();
+
+        for (Path temp : files) {
+            try (BufferedReader reader = new BufferedReader(new InputStreamReader(Files.newInputStream(temp)))) {
+                String len;
+                while ((len = reader.readLine()) != null) {
+                    String[] split = len.split("\t");
+
+                    Date real = formatter.parse(split[2]);
+                    Date after = formatter.parse(date_1);
+                    Date before = formatter.parse(date_2);
+
+                    if (real.after(after) && real.before(before)) {
+                        if (id2 == 3) {
+                            if (split[id2].split(" ")[0].equals(value)) {
+                                if (id1 == 0) {
+                                    String ip = split[0];
+                                    result.add(ip);
+                                } else if (id1 == 1) {
+                                    String user = split[1];
+                                    result.add(user);
+                                } else if (id1 == 2) {
+                                    Date parse = formatter.parse(split[2]);
+                                    result.add(parse);
+                                } else if (id1 == 3) {
+                                    Event event = Event.valueOf(split[3].split(" ")[0]);
+                                    result.add(event);
+                                } else if (id1 == 4) {
+                                    Status status = Status.valueOf(split[4]);
+                                    result.add(status);
+                                }
+                            }
+                        } else if (split[id2].equals(value)) {
+                            if (id1 == 0) {
+                                String ip = split[0];
+                                result.add(ip);
+                            } else if (id1 == 1) {
+                                String user = split[1];
+                                result.add(user);
+                            } else if (id1 == 2) {
+                                Date parse = formatter.parse(split[2]);
+                                result.add(parse);
+                            } else if (id1 == 3) {
+                                Event event = Event.valueOf(split[3].split(" ")[0]);
+                                result.add(event);
+                            } else if (id1 == 4) {
+                                Status status = Status.valueOf(split[4]);
+                                result.add(status);
+                            }
+                        }
+                    }
+
+                
+
+
+                }
+
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            } catch (ParseException e) {
+                throw new RuntimeException(e);
+            }
+
+
+        }
+        return result;
+    }
+
+    private  int indexFor(String id) {
+        Map<String, Integer> queryMap = new HashMap<>();
+        queryMap.put("ip" , 0);
+        queryMap.put("user" , 1);
+        queryMap.put("date" , 2);
+        queryMap.put("event" , 3);
+        queryMap.put("status" , 4);
+
+        return queryMap.get(id);
+    }
 
     private boolean dateCheck(Date real, Date after, Date before) {
-
         if (after == null && before == null) {
             return true;
         }
+
         if (after != null && real.before(after)) {
             return false;
         }
+
         if (before != null && real.after(before)) {
             return false;
         }
 
         return true;
     }
+
+
 }
