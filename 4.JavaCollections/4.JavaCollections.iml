@@ -29,5 +29,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="2.JavaCore" />
+    <orderEntry type="library" name="jsoup" level="project" />
   </component>
 </module>
