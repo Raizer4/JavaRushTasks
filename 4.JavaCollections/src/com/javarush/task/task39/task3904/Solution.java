@@ -15,8 +15,41 @@ public class Solution {
 
     public static long numberOfPossibleAscents(int n) {
 
+        if (n < 0) {
+            return 0;
+        }
 
+        if (n == 0) {
+            return 1;
+        }
 
+        if (n == 1) {
+            return 1;
+        }
+
+        if (n == 2) {
+            return 2;
+        }
+
+        if (n == 3) {
+            return 4;
+        }
+
+        int a = 1;
+        int b = 2;
+        int c = 4;
+
+        int current = 0;
+
+        for (int i = 4; i <= n; i++) {
+            current = a + b + c;
+
+            a = b;
+            b = c;
+            c = current;
+        }
+
+        return current;
     }
 
 }
