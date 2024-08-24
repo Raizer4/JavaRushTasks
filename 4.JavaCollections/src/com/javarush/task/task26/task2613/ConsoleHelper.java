@@ -1,5 +1,7 @@
 package com.javarush.task.task26.task2613;
 
+import com.javarush.task.task26.task2613.exception.InterruptOperationException;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,15 +14,19 @@ public class ConsoleHelper {
         System.out.println(message);
     }
 
-    public static String readString(){
+    public static String readString() throws InterruptOperationException {
         try {
-            return bis.readLine();
+            String line = bis.readLine();
+            if ("exit".equals(line.toLowerCase())) {
+                throw new InterruptOperationException();
+            }
+            return line;
         } catch (IOException e) {
-            throw new RuntimeException(e);
         }
+        return null;
     }
 
-    public static String askCurrencyCode() {
+    public static String askCurrencyCode() throws InterruptOperationException {
         while (true) {
             writeMessage("Введите код валюты");
             String currencyCode = readString().toUpperCase();
@@ -32,7 +38,7 @@ public class ConsoleHelper {
         }
     }
 
-    public static String[] getValidTwoDigits(String currencyCode) {
+    public static String[] getValidTwoDigits(String currencyCode) throws InterruptOperationException {
         while (true) {
             writeMessage("Введите два целых положительных числа: Номинал и Количество банкнот");
             String[] s = readString().split(" ");
@@ -55,14 +61,16 @@ public class ConsoleHelper {
         }
     }
 
-    public static Operation askOperation() {
+    public static Operation askOperation() throws InterruptOperationException{
         while (true) {
             try {
                 writeMessage("Выбирите действие: 1-Info, 2-Deposit, 3-Withdraw, 4-Exit");
-                return Operation.getAllowableOperationByOrdinal(Integer.parseInt(readString()));
-            } catch (Exception e) {
+                String string = readString();
+                return Operation.getAllowableOperationByOrdinal(Integer.parseInt(string));
+            }catch (IndexOutOfBoundsException e){
                 writeMessage("Не правильное введенное значение");
             }
+
         }
     }
 

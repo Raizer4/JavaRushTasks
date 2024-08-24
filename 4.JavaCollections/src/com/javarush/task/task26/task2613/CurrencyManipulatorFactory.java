@@ -2,9 +2,7 @@ package com.javarush.task.task26.task2613;
 
 
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class CurrencyManipulatorFactory {
 
@@ -22,5 +20,15 @@ public class CurrencyManipulatorFactory {
         }
         return map.get(currencyCode);
     }
+
+    public static Collection<CurrencyManipulator> getAllCurrencyManipulators(){
+        Set<String> strings = map.keySet();
+        List<CurrencyManipulator> result = new ArrayList<>();
+        for (String temp : strings){
+             result.add(map.get(temp));
+        }
+        return result;
+    }
+
 
 }
