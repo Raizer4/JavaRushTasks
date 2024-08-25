@@ -30,5 +30,10 @@
     </orderEntry>
     <orderEntry type="module" module-name="2.JavaCore" />
     <orderEntry type="library" name="jsoup" level="project" />
+    <orderEntry type="library" name="httpcore-4.4.16" level="project" />
+    <orderEntry type="library" name="httpclient-4.5.13" level="project" />
+    <orderEntry type="library" name="javax.mail-1.6.2" level="project" />
+    <orderEntry type="library" name="javax.mail-api-1.6.2" level="project" />
+    <orderEntry type="library" name="activation-1.1.1" level="project" />
   </component>
 </module>
